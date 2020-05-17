@@ -1,0 +1,100 @@
+
+<h1 class="center">Форма с личными данными</h1>
+<%# <form action="<%user_forms_path" method="post"> 
+    Имя:<br>
+    <input type="text" name="first_name"><br><br>
+    Фамилия:<br>
+    <input type="text" name="last_name"><br><br>
+    Дата рождения:
+    <input type="date" name="" id=""><br><br>
+    Страна происхождения:
+    <select name="country">
+      <option value="">Украина</option>
+      <option value="">Россия</option>
+      <option value="">Белорусия</option>
+    </select><br><br>
+    Интересы:<br>
+    <input type="checkbox" name="lang">HTML<br>
+    <input type="checkbox" name="lang">CSS<br>
+    <input type="checkbox" name="lang">RUBY<br>
+    <input type="checkbox" name="lang">PHP<br>
+    <input type="checkbox" name="lang">Javascript<br><br>
+    E-mail:
+    <input type="email" name="email"><br><br>
+    Password:
+    <input type="password" name="password" id=""><br><br>
+    Как часто хотите получать письма на электронную почту?<br>
+    <input type="radio" name="answer" id="" value="1">Еженеднльно<br>
+    <input type="radio" name="answer" id="" value="2">Ежемесячно<br>
+    <input type="radio" name="answer" id="" value="3">Никогда<br><br><br>
+    Ваше мнение о Codifun:<br><br>
+    <textarea name="description" cols="50" rows="10"></textarea><br><br>
+    <button type="submit">Отправить</button>
+
+  </form> %>
+<%= form_for :user_form, url: user_forms_path do |f| %>
+
+	<div class="field">		
+		<%= f.label "Имя" %><br>
+		<%= f.text_field :first_name, :class => 'form-control' %>
+	</div><br>
+
+	<div class="field">		
+		<%= f.label "Фамилия" %><br>		
+		<%= f.text_field :last_name, :class => 'form-control' %>
+	</div><br>
+
+  <div class="field">	
+		<%= f.label "Дата рождения" %>	
+		<%= f.date_field :date, :class => 'form-control', :style => "width:200px;" %>
+	</div><br>
+
+  <div class="field">		
+		<%= f.label "Страна проживания" %> :	
+		<%= f.select :country, ["Украина", "Россия", "Молдавия", "Белорусия"], {}, {class: 'form-control'}%>
+	</div><br>
+
+  <div class="field">
+    <%= f.label "Ваши интересы" %><br>
+    <%= f.check_box :html, {}, true, false %>
+    <%= f.label "html" %>
+  </div>
+  <div class="field">
+    <%= f.check_box :css, {}, true, false %>
+    <%= f.label "css" %>
+  </div>
+  <div class="field">
+    <%= f.check_box :ruby, {}, true, false %>
+    <%= f.label "ruby" %>
+  </div>
+  <div class="field">
+    <%= f.check_box :php, {}, true, false %>
+    <%= f.label "php" %>
+  </div>
+  <div class="field">
+    <%= f.check_box :javascript, {}, true, false %>
+    <%= f.label "javascript" %>
+  </div><br>
+  <div class="field"> 		
+		<%= f.label "Ваш email" %><br>
+		<%= f.text_field :email, :class => 'form-control' %>
+	</div><br>
+  <div class="field"> 		
+		<%= f.label "Ваш пароль" %><br>
+		<%= f.password_field :password, :class => 'form-control' %>
+	</div><br>
+  <div class="field"> 		
+		<%= f.label "Как часто хотите получать письма на электронную почту?" %><br>
+    <%= f.radio_button :answer, 'Еженедельно', :checked => true %> Еженедельно<br>
+    <%= f.radio_button :answer, 'Ежемесячно' %> Ежемесячно<br>
+    <%= f.radio_button :answer, 'Никогда' %> Никогда<br>
+	</div><br>
+  <div class="field"> 		
+		<%= f.label "Ваше мнение о"%> Codifun<br>
+		<%= f.text_area :description, cols: "50", rows: "10", :class => 'form-control' %>
+	</div><br>
+	
+	<p>
+		<%= f.submit "Опубликовать", :class => 'btn btn-primary' %>		
+	</p>
+<% end %>

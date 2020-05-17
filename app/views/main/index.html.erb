@@ -1,0 +1,83 @@
+<%# <h1 class="center"><%= link_to 'Заполните пожалуйста форму!', new_user_form_path(@user_form) </h1> %>
+<h1>Codifun inspire me!</h1>
+
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perferendis provident reprehenderit consectetur, aut, explicabo soluta quasi, repellat sint modi libero eum? Placeat eveniet distinctio consectetur reprehenderit enim ducimus maxime!
+  </p> 
+  <table >
+    <tr>
+      <th><strong>Меню</strong></th>
+      <th></th>
+      <th></th>
+      <th class="th"></th>
+    </tr>
+    <tr>
+      <td width="200px">
+        <ul id="nav-menu">
+          <strong>
+            <li class="nav-item"><%= link_to 'Главная страница', root_path %></li>
+            <li class="nav-item"><a href="#">Интересные факты</a></li>
+            <li class="nav-item"><a href="#">Контакты</a></li>
+            <li class="nav-item"><%= link_to 'Заполните форму', new_user_form_path(@user_form) %></li>
+            <li class="nav-item"><a href="https://www.facebook.com/yura.poznokos">My Facebook</a></li>
+          </strong>
+        </ul>
+      </td>
+      <td valign="top">
+        <h2 class="article-title">Заголовок Статья</h2>
+        <span class="span">
+          <%= image_pack_tag("media/packs/images/articol-1.png")%>
+        </span>
+        
+        <h6 class="h6">Author: First name Last name</h6>
+        <p class="p">
+          <mark>Lorem ipsum dolor sit amet consectetur
+            adipisicing elit.</mark><br> Maiores ullam, amet delectus
+          ipsam optio cupiditate harum, adipisci enim molestias,
+          quos provident voluptatibus sed voluptatum voluptate?<br>
+          Quos labore beatae dolorem pariatur.
+        </p>
+        <audio class="video" autoplay controls muted>
+          <source src="<%= asset_path("audio.mp3")%>">
+          Your browser does not support the audio tag.
+        </audio>
+      </td>
+      <td valign="top">
+        <h2 class="article-title">Заголовок Статья 2</h2>
+        <span class="span">
+        <img src="<%= asset_path("articol-2.png")%>" >  
+        </span>
+        <h6 class="h6">Author: First name Last name</h6>
+        <p class="p">
+          Lorem ipsum dolor sit amet consectetur
+          adipisicing elit.<br> Maiores ullam, amet delectus
+          ipsam optio cupiditate harum, adipisci enim molestias,
+          quos provident voluptatibus sed voluptatum voluptate?<br>
+          Quos labore beatae dolorem pariatur.
+        </p>
+        <!-- <video class="video" poster="images/articol-2.png" controls>
+          <source src="video/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video> -->
+      </td>
+      <td valign="top">
+        <h2 class="article-title">Заголовок Статья 3</h2>
+        <span class="span">
+          <%= image_pack_tag("media/packs/images/articol-3.png")%>
+        </span>
+        <h6 class="h6">Author: First name Last name</h6>
+        <p class="p">
+          Lorem ipsum dolor sit amet consectetur
+          adipisicing elit.<br> Maiores ullam, amet delectus
+          ipsam optio cupiditate harum, adipisci enim molestias,
+          quos provident voluptatibus sed voluptatum voluptate?<br>
+          Quos labore beatae dolorem pariatur.
+        </p>
+        <!-- <video class="video" autoplay muted controls loop>
+          <source src="video/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video> -->
+      </td>
+    </tr>
+  </table>
+  <blockquote>Знания создают ваше будущее!</blockquote>

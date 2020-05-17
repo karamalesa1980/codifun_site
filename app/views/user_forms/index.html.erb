@@ -1,0 +1,8 @@
+<% @user_forms.each do |form| %>
+  <p>
+    <%= form.first_name %>
+    <%= form.last_name %>
+  <p>  
+    <%= link_to 'Просмотр', user_form_path(form) %>
+  <hr>  
+<% end %>

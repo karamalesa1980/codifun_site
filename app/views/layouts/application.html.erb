@@ -7,9 +7,22 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <style>
+      .navbar{
+        background-color: #F5F7F8;
+      }
+    </style>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="navbar">
+      <%= link_to 'Главная страница', root_path, :class => 'btn btn-outline-info' %>
+    </div>
+    
+    
+    <div class="container">
+      <%= yield %>
+    </div>
+    
   </body>
 </html>
