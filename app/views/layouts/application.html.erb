@@ -8,15 +8,19 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <style>
-      .navbar{
+      .shapka{
         background-color: #F5F7F8;
+        height: 70px;
+        padding: 13px;
       }
     </style>
   </head>
 
   <body>
-    <div class="navbar">
+    <div class="shapka">
+      <%= link_to 'My Facebook', "https://www.facebook.com/yura.poznokos", :class => 'btn btn-primary' %>
       <%= link_to 'Главная страница', root_path, :class => 'btn btn-outline-info' %>
+      <%= link_to 'Заполните форму', new_user_form_path(@user_form), :class => 'btn btn-outline-info'  %>
     </div>
     
     
