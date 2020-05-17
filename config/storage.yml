@@ -15,11 +15,19 @@ local:
 #   bucket: your_own_bucket
 
 # Remember not to checkin your GCS keyfile to a repository
-# google:
-#   service: GCS
-#   project: your_project
-#   credentials: <%= Rails.root.join("path/to/gcs.keyfile") %>
-#   bucket: your_own_bucket
+google:
+  service: GCS
+  credentials:
+    "type": "service_account",
+    "project_id": "sylvan-client-255319",
+    "private_key_id": "b1c21039cd4a371bc5840eec796e62cfc1ed829b",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDUeS0mqlbwJ4Yx\nv/5/VDMGCwvVm6oivZ4ZkMbZluHwKte2m1CO986GNK+Fu0OSTA4tdiEVl3ing2xd\nNHR0vBJ0tD9S+hXO2jWHAbpObyk/IZiBXIgaRDjVlZf0qtZCSnknKtgWGtEfa/m/\ncZDXkOkVJQWAtVKB1dKxRKqL40nt/A8TY6L1Axwa+wtMHbGj8lee1wD2nxXbUexp\nCXLZenUv7MrXoIjJsrYLpuxfeuwZS7w2jeVd7XTxC4z5WJkYfj4uKuOU+v5kYcL6\nrBOFwK3h20/hkxOZIvbJ9GwUTuph14Znta4kPgb21D+OxMw1xXMhxvSgN9B+/pnT\nblJLyyEtAgMBAAECggEACTsbgFDJtqTM8nfgJ2mBzvsnYDgjV9+LkRpGXVkuBzhh\nR0xvn0p6VT/QOVvlp2M5AXYeoVjDk+mEiXcYMSMjnSDgmGsHjAVUaoFjdflj3huI\nS+R4gEWi/3qAj89lQBuKsG4u1aUEHVycTNoy+/6Odc32M32NMFlZDj0IuMue4GEt\nAr9O6F1VZc973GJMkyzpe0xX9o+fO8OhbVQNz9AM/rEzbFtnseSBvqIrzUil0H6Q\nxie7/K/y6mLdLz3+/XJBpbHeFmAzl6Hyu/aHznzaTAk4qEpR1dqbDDwjriTUsrDb\nEeUzwjdZIuVtZDRByNns+TgBP0sxngp39iCTi2Kw+QKBgQDxJXWxFEMYar34HTkV\nRA+fn0SCReykEqOSPB1svmdVn+pP9gozGWqInHgX2Q0PkSJmg6pwpjpaWWsfXzil\nDbUHEweJxsGsaxcnX7UtjKYIYPOcadtGXG0sQGvZvnTRo6rl/polsVeU8AFC+2wI\nbkuiioKLgmNqvFCOFrtZheLl1QKBgQDhj5V1Sk6F0nXiK8ETu+76Pnsd7oahlP6J\nM+oOQTWfH/Zr59++HcaaWWjUK2YCAxp/a5aL5jZGdhwMwg07GYgiLvwUQn+LN55q\nyp26Hf+Uf3E/eyL8t5oKNXMXJ2OnF8+ihf1U2NmZ8qIjkBL43LLP1gy8b/3PRdSM\n11T5/YTB+QKBgQDHKagVU2XC0c4KEKCnpqm8rL7ZVUUHkXlU+p9Ww772offUiKGN\n6IzrPUeWcqZt1/Fwd4gaN7/0BOwLYgqXj0WXDSlpqiUk8OGTnGE3uHUccG5jHa6D\nYyyrop0wnjM/PYyVHf1T6i8qjDqOhraIFAgVu43sCQlxCw0A/VdIreJi7QKBgFgv\nIImIkYZ0L65K2ON0OAwR3WRoWq5VZ+YQK9OC3wnlHxw0vR7A2WKCzh8VEH585CEo\n2OS9Dj8h8fly7GVMqBJlOBxbmy28guzRZjTbgY52/LmK1LTkuw5+sw48UhODlaO+\nqro/RWOQnp80tpYhAq+KydPqHNqqPF0L2qcZ3ItRAoGBAInHg/EoKGiHSw2ilJwf\nzYYs2wiuX9NSHvBtJ4/Auy01mF0qPSKhrqpun1Criyg28CDuoJ36//YRHLvBD93H\nZpy9S1RSF4IYCGMIO6hoe+B6NYqpKyvVnweAKIyNKIkHVfm1QievDEWWDS0/77Jg\nhBxifyv61AlamG+tulGZrTOx\n-----END PRIVATE KEY-----\n",
+    "client_email": "starting-account-rm33jipai9qe@sylvan-client-255319.iam.gserviceaccount.com",
+    "client_id": "107391894583175704045",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/starting-account-rm33jipai9qe%40sylvan-client-255319.iam.gserviceaccount.com"
 
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
 # microsoft:
